@@ -1,7 +1,7 @@
 author: Texxyy
 name: SimpleGM
 main: com.simplegm.plugin.Main
-api-version: 1.8.8
+api-version: 1.18
 version: 0.8
 
 commands:
