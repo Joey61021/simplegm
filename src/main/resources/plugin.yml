@@ -1,0 +1,16 @@
+author: Texxyy
+name: SimpleGM
+main: com.simplegm.plugin.Main
+api-version: 1.8.8
+version: 0.8
+
+commands:
+  gma:
+    aliases: [gm2]
+  gmc:
+    aliases: [gm1]
+  gm:
+  gms:
+    aliases: [gm0]
+  gmsp:
+    aliases: [gm3]
