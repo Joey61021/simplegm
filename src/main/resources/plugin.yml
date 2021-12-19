@@ -2,7 +2,7 @@ author: Texxyy
 name: SimpleGM
 main: com.simplegm.plugin.Main
 api-version: 1.18
-version: 0.8
+version: ${project.version}
 
 commands:
   gma:
