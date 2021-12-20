@@ -1,6 +1,6 @@
 package com.simplegm.plugin.services;
 
-import com.simplegm.plugin.misc.Config;
+import com.simplegm.plugin.utilities.Config;
 import com.simplegm.plugin.services.message.Message;
 import com.simplegm.plugin.services.message.MessageService;
 import lombok.NonNull;

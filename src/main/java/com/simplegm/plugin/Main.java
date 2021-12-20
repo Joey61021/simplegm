@@ -2,7 +2,7 @@ package com.simplegm.plugin;
 
 import com.simplegm.plugin.commands.GMCmd;
 import com.simplegm.plugin.commands.GenericCmd;
-import com.simplegm.plugin.misc.Config;
+import com.simplegm.plugin.utilities.Config;
 import com.simplegm.plugin.services.GamemodeService;
 import com.simplegm.plugin.services.SoundService;
 import com.simplegm.plugin.services.message.MessageService;
