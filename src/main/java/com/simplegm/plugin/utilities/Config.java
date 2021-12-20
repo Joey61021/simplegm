@@ -1,4 +1,4 @@
-package com.simplegm.plugin.misc;
+package com.simplegm.plugin.utilities;
 
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;

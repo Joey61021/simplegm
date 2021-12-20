@@ -1,6 +1,6 @@
 package com.simplegm.plugin.commands;
 
-import com.simplegm.plugin.misc.Config;
+import com.simplegm.plugin.utilities.Config;
 import com.simplegm.plugin.services.GamemodeService;
 import com.simplegm.plugin.services.SoundService;
 import com.simplegm.plugin.services.message.Message;

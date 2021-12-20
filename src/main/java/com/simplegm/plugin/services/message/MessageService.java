@@ -1,7 +1,7 @@
 package com.simplegm.plugin.services.message;
 
-import com.simplegm.plugin.misc.Config;
-import com.simplegm.plugin.misc.Utils;
+import com.simplegm.plugin.utilities.Config;
+import com.simplegm.plugin.utilities.Utils;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.command.CommandSender;

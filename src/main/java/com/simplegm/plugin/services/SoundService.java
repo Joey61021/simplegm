@@ -1,6 +1,6 @@
 package com.simplegm.plugin.services;
 
-import com.simplegm.plugin.misc.Config;
+import com.simplegm.plugin.utilities.Config;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.Sound;
