@@ -17,4 +17,4 @@ commands:
     other: "&f%target%'s gamemode has been set to %gamemode%"
   sound:
     enabled: true
-    type: ORB_PICKUP
+    type: ENTITY_EXPERIENCE_ORB_PICKUP

@@ -1,8 +1,8 @@
 package com.simplegm.plugin.services;
 
-import com.simplegm.plugin.utilities.Config;
 import com.simplegm.plugin.services.message.Message;
 import com.simplegm.plugin.services.message.MessageService;
+import com.simplegm.plugin.utilities.Config;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.GameMode;
