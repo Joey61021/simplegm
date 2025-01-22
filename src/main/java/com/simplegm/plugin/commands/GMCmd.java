@@ -1,10 +1,10 @@
 package com.simplegm.plugin.commands;
 
-import com.simplegm.plugin.utilities.Config;
 import com.simplegm.plugin.services.GamemodeService;
 import com.simplegm.plugin.services.SoundService;
 import com.simplegm.plugin.services.message.Message;
 import com.simplegm.plugin.services.message.MessageService;
+import com.simplegm.plugin.utilities.Config;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.Bukkit;
@@ -57,8 +57,7 @@ public class GMCmd implements CommandExecutor {
         messageService.sendMessage(player,
                                     Message.CMD_MESSAGES_OTHER,
                                     (s) -> s.replace("%target%", target.getName())
-                                            .replace("%gamemode%", config.getString("general.gamemodes." + target.getGameMode().toString().charAt(0)
-                                                    + target.getGameMode().toString().substring(1).toLowerCase())));
+                                            .replace("%gamemode%", config.getString("general.gamemodes." + target.getGameMode().toString().toLowerCase())));
         soundService.playSound(player, "commands.sound");
         return false;
     }

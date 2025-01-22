@@ -76,8 +76,7 @@ public class GenericCmd implements CommandExecutor {
         messageService.sendMessage(player,
                                     Message.CMD_MESSAGES_OTHER,
                                     (s) -> s.replace("%target%", target.getName())
-                                            .replace("%gamemode%", target.getGameMode().toString().charAt(0)
-                                                    + target.getGameMode().toString().substring(1).toLowerCase()));
+                                            .replace("%gamemode%", target.getGameMode().toString().toLowerCase()));
         soundService.playSound(player, "commands.sound");
         return false;
     }
