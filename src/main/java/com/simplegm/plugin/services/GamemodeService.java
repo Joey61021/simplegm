@@ -26,8 +26,7 @@ public class GamemodeService {
         player.setGameMode(gamemode);
         messageService.sendMessage(player,
                                     Message.CMD_MESSAGES_SELF,
-                                    (s) -> s.replace("%gamemode%", config.getString("general.gamemodes." + player.getGameMode().toString().charAt(0)
-                                            + player.getGameMode().toString().substring(1).toLowerCase())));
+                                    (s) -> s.replace("%gamemode%", config.getString("general.gamemodes." + player.getGameMode().toString().toLowerCase())));
         soundService.playSound(player, "commands.sound");
     }
 
@@ -43,8 +42,7 @@ public class GamemodeService {
         }
         messageService.sendMessage(player,
                                     Message.CMD_MESSAGES_SELF,
-                                    (s) -> s.replace("%gamemode%", config.getString("general.gamemodes." + player.getGameMode().toString().charAt(0)
-                                            + player.getGameMode().toString().substring(1).toLowerCase())));
+                                    (s) -> s.replace("%gamemode%", config.getString("general.gamemodes." + player.getGameMode().toString().toLowerCase())));
         soundService.playSound(player, "commands.sound");
     }
 }
