@@ -1,20 +1,20 @@
-General:
-  Gamemodes:
-    Survival: '&aSurvival'
-    Creative: '&cCreative'
-    Adventure: '&eAdventure'
-    Spectator: '&dSpectator'
-  Messages:
-    No-Console: '&cSorry, but you cannot use this command via console.'
-    No-Permission: '&cSorry, but you do not have permission to perform this command.'
-    No-Player: '&cSorry, but we could not find this player in your current server.'
-    Already-In-GM:
-      Self: '&cYou are already in this gamemode!'
-      Other: '&c%target% is already in this gamemode!'
-Commands:
-  Messages:
-    Self: '&fYour gamemode has been set to %gamemode%'
-    Other: "&f%target%'s gamemode has been set to %gamemode%"
-  Sound:
-    Enabled: true
-    Type: ORB_PICKUP
+general:
+  gamemodes:
+    survival: '&aSurvival'
+    creative: '&cCreative'
+    adventure: '&eAdventure'
+    spectator: '&dSpectator'
+  messages:
+    no-console: '&cSorry, but you cannot use this command via console.'
+    no-permission: '&cSorry, but you do not have permission to perform this command.'
+    no-player: '&cSorry, but we could not find this player in your current server.'
+    already-in-gm:
+      self: '&cYou are already in this gamemode!'
+      other: '&c%target% is already in this gamemode!'
+commands:
+  messages:
+    self: '&fYour gamemode has been set to %gamemode%'
+    other: "&f%target%'s gamemode has been set to %gamemode%"
+  sound:
+    enabled: true
+    type: ORB_PICKUP

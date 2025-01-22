@@ -29,41 +29,56 @@ public class GenericCmd implements CommandExecutor {
             messageService.sendMessage(sender, Message.GENERAL_NO_CONSOLE);
             return false;
         }
+
         Player player = (Player) sender;
         if (!(player.hasPermission("simplegm.gm" + cmd.getName().substring(2)) || player.hasPermission("simplegm.*"))) {
             messageService.sendMessage(player, Message.GENERAL_NO_PERMISSION);
             return false;
         }
-        GameMode generic = cmd.getName().equals("gma") ? GameMode.ADVENTURE : cmd.getName().equals("gmc")
-                ? GameMode.CREATIVE : cmd.getName().equals("gms") ? GameMode.SURVIVAL : GameMode.SPECTATOR;
+
+        GameMode gamemode;
+        switch (cmd.getName().toLowerCase()) {
+            case "gma": gamemode = GameMode.ADVENTURE; break;
+            case "gmc": gamemode = GameMode.CREATIVE; break;
+            case "gms": gamemode = GameMode.SURVIVAL; break;
+            case "gmsp": gamemode = GameMode.SPECTATOR; break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + cmd.getName().toLowerCase());
+        }
+
         if (args.length == 0) {
-            gamemodeService.setGamemode(player, generic);
+            gamemodeService.setGamemode(player, gamemode);
             return false;
         }
+
         if (!player.hasPermission("simplegm.others")) {
-            gamemodeService.setGamemode(player, generic);
+            gamemodeService.setGamemode(player, gamemode);
             return false;
         }
+
         Player target = Bukkit.getServer().getPlayer(args[0]);
         if (target == null || !target.isOnline()) {
             messageService.sendMessage(player, Message.GENERAL_NO_PLAYER);
             return false;
         }
+
         if (target.getUniqueId().equals(player.getUniqueId())) {
-            gamemodeService.setGamemode(player, generic);
+            gamemodeService.setGamemode(player, gamemode);
             return false;
         }
-        if (target.getGameMode() == generic) {
+
+        if (target.getGameMode() == gamemode) {
             messageService.sendMessage(player, Message.GENERAL_ALREADY_IN_GM_OTHER);
             return false;
         }
-        gamemodeService.setGamemode(target, generic);
+
+        gamemodeService.setGamemode(target, gamemode);
         messageService.sendMessage(player,
                                     Message.CMD_MESSAGES_OTHER,
                                     (s) -> s.replace("%target%", target.getName())
                                             .replace("%gamemode%", target.getGameMode().toString().charAt(0)
                                                     + target.getGameMode().toString().substring(1).toLowerCase()));
-        soundService.playSound(player, "Commands.Sound");
+        soundService.playSound(player, "commands.sound");
         return false;
     }
 }

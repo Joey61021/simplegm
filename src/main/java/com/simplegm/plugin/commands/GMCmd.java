@@ -57,9 +57,9 @@ public class GMCmd implements CommandExecutor {
         messageService.sendMessage(player,
                                     Message.CMD_MESSAGES_OTHER,
                                     (s) -> s.replace("%target%", target.getName())
-                                            .replace("%gamemode%", config.getString("General.Gamemodes." + target.getGameMode().toString().charAt(0)
+                                            .replace("%gamemode%", config.getString("general.gamemodes." + target.getGameMode().toString().charAt(0)
                                                     + target.getGameMode().toString().substring(1).toLowerCase())));
-        soundService.playSound(player, "Commands.Sound");
+        soundService.playSound(player, "commands.sound");
         return false;
     }
 }

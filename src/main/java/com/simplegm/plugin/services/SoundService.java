@@ -13,7 +13,7 @@ public class SoundService {
     private final Config config;
 
     public void playSound(Player player, String soundRoot) {
-        if (config.getBoolean(soundRoot + ".Enabled"))
-            player.playSound(player.getLocation(), Sound.valueOf(config.getString(soundRoot + ".Type").toUpperCase()), 1, 1);
+        if (config.getBoolean(soundRoot + ".enabled"))
+            player.playSound(player.getLocation(), Sound.valueOf(config.getString(soundRoot + ".type").toUpperCase()), 1, 1);
     }
 }

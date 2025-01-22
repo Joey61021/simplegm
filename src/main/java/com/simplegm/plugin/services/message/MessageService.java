@@ -23,7 +23,6 @@ public class MessageService {
         if (config.isString(path))
             receiver.sendMessage(Utils.color(replacementFunction.apply(config.getString(path))));
         else if (config.isList(path)) {
-            // Join all strings of list with a newline character so one message packet can be used to convey the whole message
             String joinedMessage = String.join("\n", config.getStringList(path));
             receiver.sendMessage(Utils.color(replacementFunction.apply(joinedMessage)));
         }
